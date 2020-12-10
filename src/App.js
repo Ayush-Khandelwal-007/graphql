@@ -14,11 +14,11 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <div className="App">
-        <h2>Books Record</h2>
-        <div className="RederScreen">
+        
+          <h2>Books Record</h2>
           <Booklist />
           <AddBook />
-        </div>
+        
       </div>
     </ApolloProvider>
   );

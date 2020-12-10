@@ -7,6 +7,7 @@ import BookDetails from './BookDetails';
 
 function Booklist(props) {
 
+    console.log(props);
     const [selected, setSelected] = useState(null);
 
 
