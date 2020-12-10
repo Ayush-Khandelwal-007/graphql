@@ -1,27 +1,7 @@
-import { React, useState } from 'react'
-import { gql } from 'apollo-boost';
-import { flowRight as compose } from 'lodash';
+import React, { useState } from 'react';
 import { graphql } from 'react-apollo';
-import { getBooksQuery } from './Booklist'
-
-
-const getAuthorsQuery = gql`
-{
-    authors{
-        name 
-        id
-    }
-}
-`;
-
-const addBookMutation = gql`
-    mutation AddBook($name: String!, $genre: String!, $authorId: ID!){
-        addBook(name: $name, genre: $genre, authorId: $authorId){
-            name
-            id
-        }
-    }
-`;
+import { getAuthorsQuery, addBookMutation, getBooksQuery } from '../queries/queries';
+import { flowRight as compose } from 'lodash';
 
 function AddBook(props) {
     const [name, setName] = useState('');

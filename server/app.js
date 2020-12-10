@@ -10,14 +10,14 @@ const app = express();
 
 
 
-const corsOptions = {
-    origin(origin, callback) {
-        callback(null, true);
-    },
-    credentials: true
-};
+// const corsOptions = {
+//     origin(origin, callback) {
+//         callback(null, true);
+//     },
+//     credentials: true
+// };
 
-app.use(cors(corsOptions));
+app.use(cors());
 
 mongoose.connect("mongodb+srv://Ayush:ayush121006@graphql.fouue.mongodb.net/GraphQL?retryWrites=true&w=majority", {useNewUrlParser: true, useUnifiedTopology: true})
 mongoose.connection.once("open", () => {
